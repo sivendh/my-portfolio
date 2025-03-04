@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting Public Articles</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            color: #222;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 1em;
+            background-color: #f8f9fa;
+            border-right: 1px solid #a2a9b1;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #000;
+            padding-bottom: 0.5em;
+            text-decoration: none;
+        }
+        .sidebar-nav {
+            padding-top: 1em;
+            border-top: 1px solid #a2a9b1;
+        }
+        .sidebar-nav h3 {
+            margin: 0.5em 0;
+            font-size: 0.9em;
+            color: #54595d;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        .sidebar-nav ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0.3em 0 1em 0;
+        }
+        .sidebar-nav li {
+            padding: 0.2em 0;
+            font-size: 0.9em;
+        }
+        .sidebar-nav a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .sidebar-nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 1.5em;
+            background-color: white;
+            border: 1px solid #a2a9b1;
+            border-right: none;
+        }
+        .article-header {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        h1 {
+            font-size: 1.8em;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+        }
+        .shared-article {
+            margin-bottom: 2em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid #a2a9b1;
+        }
+        .shared-article:last-child {
+            border-bottom: none;
+        }
+        .article-title {
+            font-size: 1.4em;
+            color: #0645ad;
+            margin-bottom: 0.5em;
+        }
+        .article-meta {
+            font-size: 0.9em;
+            color: #54595d;
+            margin-bottom: 1em;
+        }
+        .article-summary {
+            margin-bottom: 1em;
+        }
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+        .read-original {
+            display: inline-block;
+            color: #0645ad;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-original:hover {
+            text-decoration: underline;
+        }
+        .tags {
+            margin-top: 0.5em;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #eaecf0;
+            color: #54595d;
+            padding: 0.2em 0.5em;
+            margin-right: 0.5em;
+            margin-bottom: 0.5em;
+            font-size: 0.8em;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" class="logo">Shared Articles</a>
+            <div class="sidebar-nav">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#science">Science</a></li>
+                    <li><a href="#politics">Politics</a></li>
+                    <li><a href="#environment">Environment</a></li>
+                    <li><a href="#health">Health</a></li>
+                </ul>
+                <h3>Sources</h3>
+                <ul>
+                    <li><a href="#new-york-times">New York Times</a></li>
+                    <li><a href="#wired">Wired</a></li>
+                    <li><a href="#national-geographic">National Geographic</a></li>
+                    <li><a href="#scientific-american">Scientific American</a></li>
+                </ul>
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#about">About this Collection</a></li>
+                    <li><a href="#submit">Submit an Article</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="article-header">
+                <h1>Curated Public Articles</h1>
+            </div>
+
+            <div class="shared-article">
+                <h2 class="article-title">
+                    <a href="https://example.com/original-article-link-1" target="_blank">
+                        Breakthrough in Renewable Energy Technology
+                    </a>
+                </h2>
+                <div class="article-meta">
+                    Published by Scientific American | March 1, 2025 | 10 min read
+                </div>
+                <img src="/api/placeholder/800/400" alt="Renewable Energy" class="article-image">
+                <div class="article-summary">
+                    <p>A groundbreaking research team has developed a new solar technology that dramatically increases energy conversion efficiency, potentially revolutionizing renewable energy production.</p>
+                </div>
+                <a href="https://example.com/original-article-link-1" class="read-original" target="_blank">Read Original Article →</a>
+                <div class="tags">
+                    <span class="tag">Renewable Energy</span>
+                    <span class="tag">Technology</span>
+                    <span class="tag">Science</span>
+                </div>
+            </div>
+
+            <div class="shared-article">
+                <h2 class="article-title">
+                    <a href="https://example.com/original-article-link-2" target="_blank">
+                        The Future of Artificial Intelligence in Healthcare
+                    </a>
+                </h2>
+                <div class="article-meta">
+                    Published by Wired | February 15, 2025 | 12 min read
+                </div>
+                <img src="/api/placeholder/800/400" alt="AI in Healthcare" class="article-image">
+                <div class="article-summary">
+                    <p>Exploring how artificial intelligence is transforming medical diagnostics, treatment planning, and patient care, with insights from leading researchers and medical professionals.</p>
+                </div>
+                <a href="https://example.com/original-article-link-2" class="read-original" target="_blank">Read Original Article →</a>
+                <div class="tags">
+                    <span class="tag">Artificial Intelligence</span>
+                    <span class="tag">Healthcare</span>
+                    <span class="tag">Technology</span>
+                </div>
+            </div>
+
+            <div class="shared-article">
+                <h2 class="article-title">
+                    <a href="https://example.com/original-article-link-3" target="_blank">
+                        Climate Change: A Global Perspective on Recent Findings
+                    </a>
+                </h2>
+                <div class="article-meta">
+                    Published by National Geographic | January 25, 2025 | 15 min read
+                </div>
+                <img src="/api/placeholder/800/400" alt="Climate Change" class="article-image">
+                <div class="article-summary">
+                    <p>A comprehensive analysis of the latest climate research, highlighting the urgent need for global cooperation and innovative solutions to mitigate environmental challenges.</p>
+                </div>
+                <a href="https://example.com/original-article-link-3" class="read-original" target="_blank">Read Original Article →</a>
+                <div class="tags">
+                    <span class="tag">Climate Change</span>
+                    <span class="tag">Environment</span>
+                    <span class="tag">Science</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
