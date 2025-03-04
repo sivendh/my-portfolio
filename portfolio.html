@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Name - Portfolio</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            color: #222;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .sidebar {
+            width: 176px;
+            padding: 1em;
+            background-color: #f8f9fa;
+            border-right: 1px solid #a2a9b1;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #000;
+            padding-bottom: 0.5em;
+            text-decoration: none;
+        }
+        .sidebar-nav {
+            padding-top: 1em;
+            border-top: 1px solid #a2a9b1;
+        }
+        .sidebar-nav h3 {
+            margin: 0.5em 0;
+            font-size: 0.9em;
+            color: #54595d;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        .sidebar-nav ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0.3em 0 1em 0;
+        }
+        .sidebar-nav li {
+            padding: 0.2em 0;
+            font-size: 0.9em;
+        }
+        .sidebar-nav a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .sidebar-nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 1.5em;
+            background-color: white;
+            border: 1px solid #a2a9b1;
+            border-right: none;
+        }
+        .article-header {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        h1 {
+            font-size: 1.8em;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+        }
+        .article-header .tabs {
+            margin-top: 1em;
+            display: flex;
+            border-bottom: 1px solid #a2a9b1;
+        }
+        .tab {
+            padding: 0.5em 1em;
+            margin-right: 0.5em;
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            border-bottom: none;
+            border-radius: 3px 3px 0 0;
+            font-size: 0.9em;
+        }
+        .tab.active {
+            background-color: white;
+            border-bottom: 1px solid white;
+            margin-bottom: -1px;
+            font-weight: bold;
+        }
+        .tab a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .hatnote {
+            font-style: italic;
+            color: #54595d;
+            margin-bottom: 1em;
+        }
+        .infobox {
+            float: right;
+            margin: 0 0 1em 1em;
+            padding: 0.3em;
+            border: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            font-size: 0.9em;
+            width: 22em;
+            text-align: left;
+            line-height: 1.4;
+        }
+        .infobox-title {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #e6e6e6;
+            padding: 0.3em;
+            margin-bottom: 0.3em;
+        }
+        .infobox img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        .infobox-data {
+            display: grid;
+            grid-template-columns: 33% 67%;
+        }
+        .infobox-label {
+            font-weight: bold;
+            background-color: #eaecf0;
+            padding: 0.2em 0.4em;
+        }
+        .infobox-value {
+            padding: 0.2em 0.4em;
+        }
+        .toc {
+            border: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            padding: 0.5em;
+            display: table;
+            margin: 1em 0;
+            font-size: 0.9em;
+        }
+        .toc-title {
+            font-weight: bold;
+            text-align: center;
+        }
+        .toc ol {
+            margin: 0.3em 0 0 1em;
+            padding-left: 1em;
+            counter-reset: item;
+        }
+        .toc li {
+            margin: 0.2em 0;
+            list-style-type: none;
+            counter-increment: item;
+        }
+        .toc li:before {
+            content: counter(item) ". ";
+            display: inline-block;
+        }
+        .toc a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            border-bottom: 1px solid #a2a9b1;
+            margin: 1em 0 0.5em 0;
+        }
+        h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 1em 0 0.5em 0;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .references {
+            font-size: 0.9em;
+        }
+        footer {
+            margin-top: 2em;
+            border-top: 1px solid #a2a9b1;
+            padding-top: 1em;
+            font-size: 0.8em;
+            color: #54595d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" class="logo">Portfolio</a>
+            <div class="sidebar-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="portfolio.html">Main page</a></li>
+                   
+                    <li><a href="#education">Education</a></li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <h3>My Projects</h3>
+                
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="#resume">Download Resume</a></li>
+                    <li><a href="https://github.com/sivendh" target="_blank">GitHub</a></li>
+                    <li><a href="#linkedin">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="article-header">
+                <h1>Sivendh K B</h1>
+                <div class="tabs">
+                    <div class="tab active"><a href="#">Article</a></div>
+                    
+                   
+                    <div class="tab"><a href="read.html">Read</a></div>
+                    
+                    <div class="tab"><a href="blog.html">Blog</a></div>
+                </div>
+            </div>
+            
+            <div class="hatnote">
+                For other uses, see <a href="#">Sivendh K B (disambiguation)</a>.
+            </div>
+            
+            <div class="infobox">
+                <div class="infobox-title">Sivendh K B</div>
+                <img src="/api/placeholder/220/250" alt="Student Photo">
+                <div class="infobox-data">
+                    
+                    
+                    
+                    <div class="infobox-label">Education</div>
+                    <div class="infobox-value">IITM BS (2024-)</div>
+                    
+                    
+                </div>
+            </div>
+            
+            <p><strong>Sivendh K B</strong>  is a student Currently pursuing  IITM BS degree in Data Science and Applicationn. Currentely in foundation level of the program.</p>
+            
+           
+
+            
+          
+            
+            <footer>
+                <p>This page was last edited on March 1, 2025</p>
+                <p>Portfolio content by Student Name © 2025. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
